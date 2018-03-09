@@ -10,7 +10,7 @@ print('欢迎来到恋爱大冒险')
 input()
 print('请按回车键来进行游戏')
 input()
-print('经过三年的高中学习，我终于和同年级的暗恋的女生考上了同一所大学')
+print('经过三年的学习，我终于和同年级的暗恋的女生考上了同一所大学')
 input()
 print('开学第一天，我在食堂遇到她了，我应该')
 input()
@@ -37,7 +37,13 @@ elif option1==2:
         print('还不熟，乱约什么') 
         input()
         print('对不起，你失败了。GAME OVER')
+    else:
+        print('输入错误，请重头来过')
+        pass
 elif option1==3:
     print('太怂了，注定单身')
     input()
     print('对不起，你失败了。GAME OVER')
+else:
+    print('输入错误，请重头来过')
+    pass
