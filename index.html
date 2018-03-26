@@ -1,69 +1,61 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>reveal.js</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="css/theme/custom.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
-        <link rel="stylesheet" href="css/theme/custom.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal" style="background-color: #fff;">
-			<div class="slides" >
-                    <section data-background-video="bgm.mp4" data-background-video-loop  data-background-video-muted style="text-align: left;">
-<h2 style="color: white">Python Programming</h2>
-<h5 style="color: white">Lecture 2 Conditional Execution, Lists</h5>
-    				</section>
-
-    			<section>
-                    <section data-background="#2980b9" style="color: white">
-<h2 style="color: white">2.1 Boolean Expressions</h2>
-    				</section>
-    				
-                    <section>
-<ul>
-    <li class="fragment">A boolean expression is an expression that is either true or false.</li>
-
-<div class="fragment">
-<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+<body>
+    <div class="reveal" style="background-color: #fff;">
+        <div class="slides">
+            <section data-background-video="bgm.mp4" data-background-video-loop data-background-video-muted style="text-align: left;">
+                <h2 style="color: white">Python Programming</h2>
+                <h5 style="color: white">Lecture 2 Conditional Execution, Lists</h5>
+            </section>
+            <section>
+                <section data-background="#2980b9" style="color: white">
+                    <h2 style="color: white">2.1 Boolean Expressions</h2>
+                </section>
+                <section>
+                    <ul>
+                        <li class="fragment">A boolean expression is an expression that is either true or false.</li>
+                        <div class="fragment">
+                            <pre style="font-size: 0.77em"><code class="line-numbers" data-trim contenteditable >
 >>> 5 == 5
 True
 >>> 5 == 6
 False
 </code></pre></div>
-    <li class="fragment"><b>Note that here we use a double equal sign $==$.</b></li>
-    <li class="fragment">True and False are special values that belong to the class bool; they are not strings.</li>
-    <div class="fragment">
-<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+                        <li class="fragment"><b>Note that here we use a double equal sign $==$.</b></li>
+                        <li class="fragment">True and False are special values that belong to the class bool; they are not strings.</li>
+                        <div class="fragment">
+                            <pre style="font-size: 0.77em"><code class="line-numbers" data-trim contenteditable >
 >>> type(True)
 bool
 >>> type(False)
 bool
 </code></pre></div>
-
-</ul>
-                    </section>
-
-    				<section>
-
-<h3>There are other ways of comparison.</h3>
-    <div class="fragment">
-<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+                    </ul>
+                </section>
+                <section>
+                    <h3>There are other ways of comparison.</h3>
+                    <div class="fragment">
+                        <pre style="font-size: 0.77em"><code class="line-numbers" data-trim contenteditable >
 x != y # x is not equal to y
 x > y # x is greater than y
 x < y # x is less than y
@@ -72,14 +64,12 @@ x <= y # x is less than or equal to y
 x is y # x is the same as y
 x is not y # x is not the same as y
 </code></pre></div>
-
-
-    				</section>
-    				<section>
-<h3>Logical operators</h3>  
-<p class="fragment">And</p>
-    <div class="fragment">
-<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+                </section>
+                <section>
+                    <h3>Logical operators</h3>
+                    <p class="fragment">And</p>
+                    <div class="fragment">
+                        <pre style="font-size: 0.77em"><code class="line-numbers" data-trim contenteditable >
 >>> True and True
 True
 >>> True and False
@@ -89,9 +79,9 @@ False
 >>> 5 > 3 and 3 > 1
 True
 </code></pre></div>
-<p class="fragment">Or</p>
- <div class="fragment">
-<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+                    <p class="fragment">Or</p>
+                    <div class="fragment">
+                        <pre style="font-size: 0.77em"><code class="line-numbers" data-trim contenteditable >
 >>> True or True
 True
 >>> True or False
@@ -101,12 +91,11 @@ False
 >>> 5 > 3 or 1 > 3
 True
 </code></pre></div>
-
-    				</section>
-    				<section>
-<p class="fragment">Not</p>
- <div class="fragment">
-<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+                </section>
+                <section>
+                    <p class="fragment">Not</p>
+                    <div class="fragment">
+                        <pre style="font-size: 0.77em"><code class="line-numbers" data-trim contenteditable >
 >>> not True
 False
 >>> not False
@@ -114,23 +103,23 @@ True
 >>> not 1 > 2
 True
 </code></pre></div>
-<p class="fragment">What if I enter a number?</p>
- <div class="fragment">
-<pre style="font-size: 0.77em"><code class="hljs" data-trim contenteditable >
+                    <p class="fragment">What if I enter a number?</p>
+                    <div class="fragment">
+                        <pre style="font-size: 0.77em"><code class="line-numbers" data-trim contenteditable >
 >>> 17 and True
 True
 </code></pre></div>
-<b class="fragment">Any nonzero number is interpreted as "true".</b>
-    				</section>
-    				<section>
-<h3>Short-circuit evaluation</h3>
-<ul>
-	<li>Python evaluates the expression from left to right.</li>
-	<li>If there are multiple expressions, Python evaluates them one by one.</li>
-	<li>If there is nothing to be gained by evaluating the rest of a logical expression, it stops its evaluation.</li> 
-</ul>
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    <b class="fragment">Any nonzero number is interpreted as "true".</b>
+                </section>
+                <section>
+                    <h3>Short-circuit evaluation</h3>
+                    <ul>
+                        <li>Python evaluates the expression from left to right.</li>
+                        <li>If there are multiple expressions, Python evaluates them one by one.</li>
+                        <li>If there is nothing to be gained by evaluating the rest of a logical expression, it stops its evaluation.</li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> x = 6
 >>> y = 2
 >>> x >= 2 and (x/y) > 2
@@ -146,12 +135,11 @@ Traceback (most recent call last):
   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
 ZeroDivisionError: division by zero
 </code></pre></div>
-    				</section>
-    				<section>
-<p>While this may seem like a fine point, the short-circuit behavior leads to a clever
-technique called the guardian pattern.</p>
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                </section>
+                <section>
+                    <p>While this may seem like a fine point, the short-circuit behavior leads to a clever technique called the guardian pattern.</p>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> x = 1
 >>> y = 0
 >>> x >= 2 and y!= 0 and (x/y) > 2
@@ -164,98 +152,111 @@ False
 Traceback (most recent call last):
   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
 ZeroDivisionError: division by zero
-</code></pre></div>                      
-    				</section>
-    			</section>
-    			<section>
-                    <section data-background="#2980b9" style="color: white">
-<h2 style="color: white">2.2 Conditional Execution</h2>
-
-                    </section>
-					<section>
-<ul>
-	<li>If statement</li>
-</ul>                     
-<div id="left"><img src="31.png" style="height: 300pt;">
-</div>
-<div id="right"><div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                </section>
+            </section>
+            <section>
+                <section data-background="#2980b9" style="color: white">
+                    <h2 style="color: white">2.2 Conditional Execution</h2>
+                </section>
+                <section>
+                    <ul>
+                        <li>If statement</li>
+                    </ul>
+                    <div id="left"><img src="31.png" style="height: 300pt;">
+                    </div>
+                    <div id="right">
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 x=10
 if x > 0 :
-	print('x is positive') #The indent
+    print('x is positive') #The indent
 </code></pre></div>
-<ul class="fragment">
-	<li><p>The boolean expression after the if statement is called the <b>condition</b>.</p></li>
-	<li><p>We end the if statement with a colon character :</p></li>
-	<li><p>If the logical condition is true, then the indented statement gets executed.</p></li>
-</ul>
-</div>
-    				</section>
-    				<section>
-<ul>
-                    		<li class="fragment">
-                    			<p>There is no limit on the number of statements, but there must be at least one.</p>
-                    		</li>
-                    		<li class="fragment">
-                    			<p>If there is no statement, you can use pass statement, which does nothing.</p>
-                    		</li>
-                    		<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                        <ul class="fragment">
+                            <li>
+                                <p>The boolean expression after the if statement is called the <b>condition</b>.</p>
+                            </li>
+                            <li>
+                                <p>We end the if statement with a colon character :</p>
+                            </li>
+                            <li>
+                                <p>If the logical condition is true, then the indented statement gets executed.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <ul>
+                        <li class="fragment">
+                            <p>There is no limit on the number of statements, but there must be at least one.</p>
+                        </li>
+                        <li class="fragment">
+                            <p>If there is no statement, you can use pass statement, which does nothing.</p>
+                        </li>
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 if x < 0 :
-	pass # need to handle negative values!
-</code></pre></div>                      
-                    	</ul>                    	
-    				</section>			 
-    				<section>
-<ul>
-	<li>Alternative Execution</li>
-</ul>                     
-<div id="leftm"><img src="32.png" style="width: 400pt;">
-</div>
-<div id="rightm"><div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+    pass # need to handle negative values!
+</code></pre></div>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>Alternative Execution</li>
+                    </ul>
+                    <div id="leftm"><img src="32.png" style="width: 400pt;">
+                    </div>
+                    <div id="rightm">
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 x=10
 if x%2 == 0 :
-	print('x is even')
+    print('x is even')
 else :
-	print('x is odd')
+    print('x is odd')
 </code></pre></div>
-</div>
-                    </section>
-                    <section>
-<ul>
-	<li>Chained Conditionals</li>
-</ul>                     
-<div id="leftc"><img src="33.png" style="width: 400pt;">
-</div>
-<div id="rightc"><div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    </div>
+                </section>
+                <section>
+                    <ul>
+                        <li>Chained Conditionals</li>
+                    </ul>
+                    <div id="leftc"><img src="33.png" style="width: 400pt;">
+                    </div>
+                    <div id="rightc">
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 x=5
 y=10
 if x < y:
-	print('x is less than y')
+    print('x is less than y')
 elif x > y:
-	print('x is greater than y')
+    print('x is greater than y')
 else:
-	print('x and y are equal')
+    print('x and y are equal')
 </code></pre></div>
-<ul class="fragment">
-	<li><p>elif is an abbreviation of “else if.”</p></li>
-	<li><p>No limit on the number of elif statements. If there is an else clause, it
-has to be at the end, but there does not have to be one.</p></li>
-	<li><p>Each condition is checked in order. If the first is false, the next is checked. If one of them is true, then it executes, and the statement ends. </p></li>
-</ul>
-</div>
-                    </section>
-
-                    <section>
-<ul>
-	<li>Nested Conditionals</li>
-</ul>                     
-<div id="leftc"><img src="35.png" style="width: 100%;">
-</div>
-<div id="rightc"><div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                        <ul class="fragment">
+                            <li>
+                                <p>elif is an abbreviation of “else if.”</p>
+                            </li>
+                            <li>
+                                <p>No limit on the number of elif statements. If there is an else clause, it has to be at the end, but there does not have to be one.</p>
+                            </li>
+                            <li>
+                                <p>Each condition is checked in order. If the first is false, the next is checked. If one of them is true, then it executes, and the statement ends. </p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <ul>
+                        <li>Nested Conditionals</li>
+                    </ul>
+                    <div id="leftc"><img src="35.png" style="width: 100%;">
+                    </div>
+                    <div id="rightc">
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 if x == y:
     print('x and y are equal')
 else:
@@ -264,25 +265,28 @@ else:
     else:
         print('x is greater than y')
 </code></pre></div>
-<ul>
-	<li class="fragment"><p>Nested conditionals are difficult to read. In general, it is a good idea to avoid them when you can.</p></li>
-</ul>
-</div>
+                        <ul>
+                            <li class="fragment">
+                                <p>Nested conditionals are difficult to read. In general, it is a good idea to avoid them when you can.</p>
+                            </li>
+                        </ul>
+                    </div>
                 </section>
                 <section>
-<ul>
-                	<li>Try and Except</li>
-                </ul>  
-
-                <div><div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    <ul>
+                        <li>Try and Except</li>
+                    </ul>
+                    <div>
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 inp = input('Enter Fahrenheit Temperature: ')
 fahr = float(inp)
 cel = (fahr - 32.0) * 5.0 / 9.0
 print(cel)
-</code></pre></div>   
-<div><div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                        <div>
+                            <div class="fragment">
+                                <pre><code class="line-numbers" data-trim contenteditable >
 Enter Fahrenheit Temperature:72
 22.22222222222222
 
@@ -291,175 +295,156 @@ Traceback (most recent call last):
 File "fahren.py", line 2, in <module>
 fahr = float(inp)
 ValueError: could not convert string to float: 'fred'
-</code></pre></div>   
-
-    			</section>
-    			<section>
-    				<ul>
-    					<li>The idea of try and
-except is that you know that some sequence of instruction(s) may have a problem
-and you want to add some statements to be executed if an error occurs. These
-extra statements (the except block) are ignored if there is no error.</li>
-    				</ul>
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                </section>
+                <section>
+                    <ul>
+                        <li>The idea of try and except is that you know that some sequence of instruction(s) may have a problem and you want to add some statements to be executed if an error occurs. These extra statements (the except block) are ignored if there is no error.</li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 inp = input('Enter Fahrenheit Temperature:')
 try:
-	fahr = float(inp)
-	cel = (fahr - 32.0) * 5.0 / 9.0
-	print(cel)
+    fahr = float(inp)
+    cel = (fahr - 32.0) * 5.0 / 9.0
+    print(cel)
 except:
-	print('Please enter a number')
-</code></pre></div> 
-
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+    print('Please enter a number')
+</code></pre></div>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 Enter Fahrenheit Temperature:72
 22.22222222222222
 
 Enter Fahrenheit Temperature:fred
 Please enter a number
-</code></pre></div> 
-    				
-    			</section>
-    			</section>
-
-<section>
-	<section data-background="#2980b9" style="color: white">
-<h2>2.3 Flow Chart</h2>
-</section>
-<section>
-	<ul>
-		<li>A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows.</li>
-		<p class="fragment"><img  data-src="flowchart.png" height="300"></p>
-	</ul>
-	<ul>
-		<li class="fragment">Office Visio, ProcessOn</li>
-	</ul>
-
-</section>
-<section>
-	<ul>
-	<li>Example: A Simple Game</li>
-	<li class="fragment">What are the key elements of a game? </li>
-	<li class="fragment">Making a choice and feedback.</li>
-	<p class="fragment"><img  data-src="game.png" height="500"></p>
-	</ul>
-</section>
-
-<section>
-	Visual programming language
-	<ul>
-		<li><a href="https://scratch.mit.edu/">Scratch</a></li>
-		<li><a href="https://developers.google.com/blockly/">Blockly(Google)</a></li>
-		<p class="fragment"><img  data-src="blockly.png" height="500"></p>
-	</ul>
-</section>
-
-</section>
-
-
-<section>
-	<section data-background="#2980b9" style="color: white">
-<h2 style="color: white">2.4 Lists (1)</h2>
-                    </section>
-<section>
-<ul>
-	<li>A list is a sequence of values.</li>
-</ul>
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                </section>
+            </section>
+            <section>
+                <section data-background="#2980b9" style="color: white">
+                    <h2>2.3 Flow Chart</h2>
+                </section>
+                <section>
+                    <ul>
+                        <li>A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows.</li>
+                        <p class="fragment"><img data-src="flowchart.png" height="300"></p>
+                    </ul>
+                    <ul>
+                        <li class="fragment">Office Visio, ProcessOn</li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>Example: A Simple Game</li>
+                        <li class="fragment">What are the key elements of a game? </li>
+                        <li class="fragment">Making a choice and feedback.</li>
+                        <p class="fragment"><img data-src="game.png" height="500"></p>
+                    </ul>
+                </section>
+                <section>
+                    Visual programming language
+                    <ul>
+                        <li><a href="https://scratch.mit.edu/">Scratch</a></li>
+                        <li><a href="https://developers.google.com/blockly/">Blockly(Google)</a></li>
+                        <p class="fragment"><img data-src="blockly.png" height="500"></p>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section data-background="#2980b9" style="color: white">
+                    <h2 style="color: white">2.4 Lists (1)</h2>
+                </section>
+                <section>
+                    <ul>
+                        <li>A list is a sequence of values.</li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 [10, 20, 30, 40]
 ['crunchy frog', 'ram bladder', 'lark vomit']
 ['spam', 2.0, 5, [10, 20]]
-</code></pre></div> 
-<ul>
-	<li class="fragment">A list that contains no elements is called an empty list; you can create one with
-empty brackets, [].</li>
-</ul>
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                    <ul>
+                        <li class="fragment">A list that contains no elements is called an empty list; you can create one with empty brackets, [].</li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> cheeses = ['Cheddar', 'Edam', 'Gouda']
 >>> numbers = [17, 123]
 >>> empty = [] #[] is false
 >>> print(cheeses, numbers, empty)
 ['Cheddar', 'Edam', 'Gouda'] [17, 123] []
-</code></pre></div> 
-</section>
-<section>
-<ul>
-	<li><p>Lists are <b>ordered</b> collections, so you can access any element in a list by
-telling Python the position, or index, of the item desired.</p></li>
-<li class="fragment"><b>Python considers the first item in a list to be at position 0, not position 1.</b></li>
-</ul>
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <p>Lists are <b>ordered</b> collections, so you can access any element in a list by telling Python the position, or index, of the item desired.</p>
+                        </li>
+                        <li class="fragment"><b>Python considers the first item in a list to be at position 0, not position 1.</b></li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> cheeses = ['Cheddar', 'Edam', 'Gouda']
 >>> print(cheeses[0])
 Cheddar
 </code></pre></div>
-<ul><li class="fragment">
-	<p >When we ask for a single item from a
-list, Python returns just that element without square brackets or quotation
-marks.</p>
-</li>
-<li class="fragment">
-	<p>By asking
-for the item at index -1, Python always returns the last item in the list:</p>
-</li></ul>
-
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    <ul>
+                        <li class="fragment">
+                            <p>When we ask for a single item from a list, Python returns just that element without square brackets or quotation marks.
+                            </p>
+                        </li>
+                        <li class="fragment">
+                            <p>By asking for the item at index -1, Python always returns the last item in the list:</p>
+                        </li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> cheeses = ['Cheddar', 'Edam', 'Gouda']
 >>> print(cheeses[-1])
 Gouda
 >>> print(cheeses[-2])
 Edam
 </code></pre></div>
-</section>
-<section>
-<ul>
-		<li>You can change the order of items in a
-list or reassign an item in a list.</li>
-	</ul>
-	<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                </section>
+                <section>
+                    <ul>
+                        <li>You can change the order of items in a list or reassign an item in a list.</li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> numbers = [17, 123]
 >>> numbers[1] = 5
 >>> print(numbers)
 [17, 5]
-</code></pre></div>	
-</section>
-
-<section>
-
-<h3>List operations</h3>
-<ul>
-	<li>The + operator concatenates lists:</li>
-</ul>
-	<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                </section>
+                <section>
+                    <h3>List operations</h3>
+                    <ul>
+                        <li>The + operator concatenates lists:</li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> a = [1, 2, 3]
 >>> b = [4, 5, 6]
 >>> c = a + b
 >>> print(c)
 [1, 2, 3, 4, 5, 6]
-</code></pre></div>	
-
-	<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> [0] * 4
 [0, 0, 0, 0]
 >>> [1, 2, 3] * 3
 [1, 2, 3, 1, 2, 3, 1, 2, 3]
-</code></pre></div>	
-
-</section>
-
-<section>
-	<h3>List slices</h3>
-		<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                </section>
+                <section>
+                    <h3>List slices</h3>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['a', 'b', 'c', 'd', 'e', 'f']
 >>> t[1:3]
 ['b', 'c']
@@ -467,72 +452,75 @@ list or reassign an item in a list.</li>
 ['a', 'b', 'c', 'd']
 >>> t[3:]
 ['d', 'e', 'f']
-</code></pre></div>	
-<ul>
-	<li class="fragment"><b>The first slice starts at 1, and ends at 2. The slice does not contain the 3rd element.</b></li>
-</ul>
-		<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                    <ul>
+                        <li class="fragment"><b>The first slice starts at 1, and ends at 2. The slice does not contain the 3rd element.</b></li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> t[:]
 ['a', 'b', 'c', 'd', 'e', 'f']
-</code></pre></div>	
-
-		<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['a', 'b', 'c', 'd', 'e', 'f']
 >>> t[1:3] = ['x', 'y']
 >>> print(t)
 ['a', 'x', 'y', 'd', 'e', 'f']
-</code></pre></div>	
-
-
-</section>
-
-</section>
-    <section>
-<section data-background="#2980b9" style="color: white">
-<h2 style="color: white">2.5 Lists (2): Adding and Deleting Elements</h2>
-</section>
-<section>
-	<ul>
-		<li><p class="fragment"><b>append</b> adds a new element to the end of a list:</p></li>
-		<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+</code></pre></div>
+                </section>
+            </section>
+            <section>
+                <section data-background="#2980b9" style="color: white">
+                    <h2 style="color: white">2.5 Lists (2): Adding and Deleting Elements</h2>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <p class="fragment"><b>append</b> adds a new element to the end of a list:</p>
+                        </li>
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['a', 'b', 'c']
 >>> t.append('d')
 >>> print(t)
 ['a', 'b', 'c', 'd']
 </code></pre>
-		</div>
-		<li><p class="fragment"><b>extend</b> takes a list as an argument and appends all of the elements:</p></li>
-		<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                        </div>
+                        <li>
+                            <p class="fragment"><b>extend</b> takes a list as an argument and appends all of the elements:</p>
+                        </li>
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 >>> t1 = ['a', 'b', 'c']
 >>> t2 = ['d', 'e']
 >>> t1.extend(t2)
 >>> print(t1)
 ['a', 'b', 'c', 'd', 'e']
 </code></pre>
-		</div>
-<li><p class="fragment"><b>insert</b> adds a new element at any position in your list</p></li>
-		<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                        </div>
+                        <li>
+                            <p class="fragment"><b>insert</b> adds a new element at any position in your list</p>
+                        </li>
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['a', 'b', 'c']
 >>> t.insert(1, 'd')
 >>> print(t)
 ['a', 'd', 'b', 'c']
 </code></pre>
-		</div>
-	</ul>
-</section>
-<section>
-<h3>Deleting elements</h3>
-<ul>
-	<li><p class="fragment">There are several ways to delete elements from a list. If you know the index of the
-element you want, you can use <b>pop</b></p></li>
-</ul>
-			<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                        </div>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Deleting elements</h3>
+                    <ul>
+                        <li>
+                            <p class="fragment">There are several ways to delete elements from a list. If you know the index of the element you want, you can use <b>pop</b></p>
+                        </li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['a', 'b', 'c']
 >>> x = t.pop(1)
 >>> print(t)
@@ -540,13 +528,14 @@ element you want, you can use <b>pop</b></p></li>
 >>> print(x)
 b
 </code></pre>
-		</div>
-		<ul>
-			<li><p class="fragment"><b>pop</b> modifies the list and returns the element that was removed. If you don’t
-provide an index, it deletes and returns the last element.</p></li>
-		</ul>
-					<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    </div>
+                    <ul>
+                        <li>
+                            <p class="fragment"><b>pop</b> modifies the list and returns the element that was removed. If you don’t provide an index, it deletes and returns the last element.</p>
+                        </li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['a', 'b', 'c']
 >>> x = t.pop()
 >>> print(t)
@@ -554,14 +543,16 @@ provide an index, it deletes and returns the last element.</p></li>
 >>> print(x)
 c
 </code></pre>
-		</div>
-</section>
-<section>
-<ul>
-	<li><p>If you don’t need the removed value, you can use the <b>del</b> operator</p></li>
-</ul>
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    </div>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <p>If you don’t need the removed value, you can use the <b>del</b> operator</p>
+                        </li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['a', 'b', 'c']
 >>> del t[1]
 >>> print(t)
@@ -572,40 +563,45 @@ c
 >>> print(t)
 ['a', 'f']
 </code></pre>
-		</div>
-
-
-</section>
-<section>
-			<ul>
-			<li><p class="fragment">If you know the element you want to remove (but not the index), you can use
-<b>remove</b></p></li>
-		</ul>
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    </div>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <p class="fragment">If you know the element you want to remove (but not the index), you can use
+                                <b>remove</b></p>
+                        </li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['a', 'b', 'c']
 >>> t.remove('b')
 >>> print(t)
 ['a', 'c']
 </code></pre>
-</div>		
-<ul>
-	<li class="fragment"><p>The return value from remove is None. But, you can assign the element which you want to remove to a variable so that you can use it next time.</p> </li>
-	<li class="fragment"><p>There is a possibility that the value appears more than once in the list, but the remove() method deletes only the first occurrence.</p></li>
-</ul>
-</section>
-
-    </section>
-<section>
-	<section data-background="#2980b9" style="color: white">
-<h2 style="color: white">2.6 Lists (3): Organizing a list</h2>
-	</section>
-<section>
-	<ul>
-		<li class="fragment"><p><b>sort</b> arranges the elements of the list from low to high:</p></li>
-	</ul>
-	<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    </div>
+                    <ul>
+                        <li class="fragment">
+                            <p>The return value from remove is None. But, you can assign the element which you want to remove to a variable so that you can use it next time.</p>
+                        </li>
+                        <li class="fragment">
+                            <p>There is a possibility that the value appears more than once in the list, but the remove() method deletes only the first occurrence.</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section data-background="#2980b9" style="color: white">
+                    <h2 style="color: white">2.6 Lists (3): Organizing a list</h2>
+                </section>
+                <section>
+                    <ul>
+                        <li class="fragment">
+                            <p><b>sort</b> arranges the elements of the list from low to high:</p>
+                        </li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['d', 'c', 'e', 'b', 'a']
 >>> t.sort()
 >>> print(t)
@@ -616,23 +612,26 @@ c
 >>> print(t)
 ['e', 'd', 'c', 'b', 'a']
 </code></pre>
-</div>	
-<ul>
-	<li class="fragment"><p>Most list methods are void; they modify the list and return None.</p></li>
-	<li class="fragment"><p><b>.upper(), .lower(), .title(), .lstrip(), .rstrip(), .strip() return strings.</b></p></li>
-	<li class="fragment">
-		<p>The order of the list is permanently changed</p>
-	</li>
-</ul>
-	
-</section>
-<section>
-	<ul>
-		<li class="fragment">
-<p>To maintain the original order of a list but present it in a sorted order, you can use the sorted() function.</p>
-		</li>
-			<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    </div>
+                    <ul>
+                        <li class="fragment">
+                            <p>Most list methods are void; they modify the list and return None.</p>
+                        </li>
+                        <li class="fragment">
+                            <p><b>.upper(), .lower(), .title(), .lstrip(), .rstrip(), .strip() return strings.</b></p>
+                        </li>
+                        <li class="fragment">
+                            <p>The order of the list is permanently changed</p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li class="fragment">
+                            <p>To maintain the original order of a list but present it in a sorted order, you can use the sorted() function.</p>
+                        </li>
+                        <div class="fragment">
+                            <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['d', 'c', 'e', 'b', 'a']
 >>> print(sorted(t))
 ['a', 'b', 'c', 'd', 'e']
@@ -644,40 +643,39 @@ c
 >>> print(t)
 ['a', 'b', 'c', 'd', 'e']
 </code></pre>
-</div>	
-</ul>
-<ul>
-	<li class="fragment">Method and function?</li>
-</ul>
-</section>
-
-<section>
-	<ul>
-		<li><p>To reverse the original order of a list, you can use the <b>reverse()</b> method.</p></li>
-	</ul>
-			<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                        </div>
+                    </ul>
+                    <ul>
+                        <li class="fragment">Method and function?</li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <p>To reverse the original order of a list, you can use the <b>reverse()</b> method.</p>
+                        </li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> t = ['d', 'c', 'e', 'b', 'a']
 >>> t.reverse()
 >>> print(t)
 ['a', 'b', 'e', 'c', 'd']
 
 </code></pre>
-</div>	
-<ul>
-	<li class="fragment">
-		<p>The reverse() method changes the order of a list permanently, but you
-can revert to the original order anytime by applying reverse() to the same
-list a second time.</p>
-	</li>
-</ul>
-	<ul>
-		<li>
-			<p class="fragment">You can quickly find the length of a list by using the <b>len()</b> function.</p>
-		</li>
-	</ul>
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    </div>
+                    <ul>
+                        <li class="fragment">
+                            <p>The reverse() method changes the order of a list permanently, but you can revert to the original order anytime by applying reverse() to the same list a second time.</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p class="fragment">You can quickly find the length of a list by using the <b>len()</b> function.</p>
+                        </li>
+                    </ul>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> s = ['python', 'java', ['asp', 'php'], 'scheme']
 >>> len(s)
 4
@@ -686,11 +684,11 @@ list a second time.</p>
 >>> len(L)
 0
 </code></pre>
-</div>	
-</section>
-<section>
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    </div>
+                </section>
+                <section>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> s = [3, 8, 10, 7]
 >>> sum(s)
 28
@@ -701,10 +699,9 @@ list a second time.</p>
 >>> max(s)
 10
 </code></pre>
-</div>
-
-<div class="fragment">
-<pre><code class="hljs" data-trim contenteditable >
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="line-numbers" data-trim contenteditable >
 >>> x = ['banana', 'jack', 'jessica']
 >>> min(x)
 banana
@@ -720,200 +717,190 @@ Traceback (most recent call last):
 
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 </code></pre>
-</div>		
-</section>
-
-	<section>
-		<h3>Lists: Summary</h3>
-	<ul>
-		<li class="fragment">
-			<p>The element can be number, string, list, and empty [].</p>
-		</li>
-		<li class="fragment">
-			<p>Features: Ordered, Mutable, Repeatable</p>
-		</li>
-		<li class="fragment">
-			<p>The indices start at 0. Index -1 means the last item.</p>
-		</li>
-		<li class="fragment">
-			<p>The item can be changed by reassign a new item. Two lists can be added together. list slice :</p>
-		</li>
-		<li class="fragment">
-			<p>.append(), .extend(), .insert()</p>
-			<p>.pop(), del, .remove()</p>
-			<p>.sort(), sorted(), .reverse(), len(), sum(), max(), min()</p>
-		</li>
-		<li class="fragment">
-			<p>We will talk more about lists at another time.</p>
-		</li>
-	</ul>
-</section>
-
-
-</section>
-
-
-
-<section>
-		<section data-background="#2c3e50" style="color: white; text-align: left;">
-<h2 style="color: white">Summary</h2>
-<ul>
-	<li>Boolean Expressions</li>
-	<li>Conditional Execution, Flow Chart, Example</li>
-	<li>Lists</li>
-	<ul>
-	<li>Reading: Chapter 3, 8.1-8.7</li>
-	<li>Problem Set 1</li>
-</ul>
-</ul>
-
-
-
-                    </section>
-</section>
-
-			</div>
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
+                    </div>
+                </section>
+                <section>
+                    <h3>Lists: Summary</h3>
+                    <ul>
+                        <li class="fragment">
+                            <p>The element can be number, string, list, and empty [].</p>
+                        </li>
+                        <li class="fragment">
+                            <p>Features: Ordered, Mutable, Repeatable</p>
+                        </li>
+                        <li class="fragment">
+                            <p>The indices start at 0. Index -1 means the last item.</p>
+                        </li>
+                        <li class="fragment">
+                            <p>The item can be changed by reassign a new item. Two lists can be added together. list slice :</p>
+                        </li>
+                        <li class="fragment">
+                            <p>.append(), .extend(), .insert()</p>
+                            <p>.pop(), del, .remove()</p>
+                            <p>.sort(), sorted(), .reverse(), len(), sum(), max(), min()</p>
+                        </li>
+                        <li class="fragment">
+                            <p>We will talk more about lists at another time.</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section data-background="#2c3e50" style="color: white; text-align: left;">
+                    <h2 style="color: white">Summary</h2>
+                    <ul>
+                        <li>Boolean Expressions</li>
+                        <li>Conditional Execution, Flow Chart, Example</li>
+                        <li>Lists</li>
+                        <ul>
+                            <li>Reading: Chapter 3, 8.1-8.7</li>
+                            <li>Problem Set 1</li>
+                        </ul>
+                    </ul>
+                </section>
+            </section>
+            </div>
+            </div>
+            <script src="lib/js/head.min.js"></script>
+            <script src="js/reveal.js"></script>
+            <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
                 // The "normal" size of the presentation, aspect ratio will be preserved
-    // when the presentation is scaled to fit different resolutions. Can be
-    // specified using percentage units.
-    width: 960,
-    height: 700,
+                // when the presentation is scaled to fit different resolutions. Can be
+                // specified using percentage units.
+                width: 960,
+                height: 700,
 
-    // Factor of the display size that should remain empty around the content
-    margin: 0.1,
+                // Factor of the display size that should remain empty around the content
+                margin: 0.1,
 
-    // Bounds for smallest/largest possible scale to apply to content
-    minScale: 0.2,
-    maxScale: 1.5,
+                // Bounds for smallest/largest possible scale to apply to content
+                minScale: 0.2,
+                maxScale: 1.5,
 
-				// Display controls in the bottom right corner
-	controls: true,
+                // Display controls in the bottom right corner
+                controls: true,
 
-	// Display a presentation progress bar
-	progress: true,
+                // Display a presentation progress bar
+                progress: true,
 
-	// Set default timing of 2 minutes per slide
-	defaultTiming: 120,
+                // Set default timing of 2 minutes per slide
+                defaultTiming: 120,
 
-	// Display the page number of the current slide
-	slideNumber: true,
+                // Display the page number of the current slide
+                slideNumber: true,
 
-	// Push each slide change to the browser history
-	history: false,
+                // Push each slide change to the browser history
+                history: false,
 
-	// Enable keyboard shortcuts for navigation
-	keyboard: true,
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
 
-	// Enable the slide overview mode
-	overview: true,
+                // Enable the slide overview mode
+                overview: true,
 
-	// Vertical centering of slides
-	center: true,
+                // Vertical centering of slides
+                center: true,
 
-	// Enables touch navigation on devices with touch input
-	touch: true,
+                // Enables touch navigation on devices with touch input
+                touch: true,
 
-	// Loop the presentation
-	loop: false,
+                // Loop the presentation
+                loop: false,
 
-	// Change the presentation direction to be RTL
-	rtl: false,
+                // Change the presentation direction to be RTL
+                rtl: false,
 
-	// Randomizes the order of slides each time the presentation loads
-	shuffle: false,
+                // Randomizes the order of slides each time the presentation loads
+                shuffle: false,
 
-	// Turns fragments on and off globally
-	fragments: true,
+                // Turns fragments on and off globally
+                fragments: true,
 
-	// Flags if the presentation is running in an embedded mode,
-	// i.e. contained within a limited portion of the screen
-	embedded: false,
+                // Flags if the presentation is running in an embedded mode,
+                // i.e. contained within a limited portion of the screen
+                embedded: false,
 
-	// Flags if we should show a help overlay when the questionmark
-	// key is pressed
-	help: true,
+                // Flags if we should show a help overlay when the questionmark
+                // key is pressed
+                help: true,
 
-	// Flags if speaker notes should be visible to all viewers
-	showNotes: false,
+                // Flags if speaker notes should be visible to all viewers
+                showNotes: false,
 
-	// Global override for autolaying embedded media (video/audio/iframe)
-	// - null: Media will only autoplay if data-autoplay is present
-	// - true: All media will autoplay, regardless of individual setting
-	// - false: No media will autoplay, regardless of individual setting
-	autoPlayMedia: null,
+                // Global override for autolaying embedded media (video/audio/iframe)
+                // - null: Media will only autoplay if data-autoplay is present
+                // - true: All media will autoplay, regardless of individual setting
+                // - false: No media will autoplay, regardless of individual setting
+                autoPlayMedia: null,
 
-	// Number of milliseconds between automatically proceeding to the
-	// next slide, disabled when set to 0, this value can be overwritten
-	// by using a data-autoslide attribute on your slides
-	autoSlide: 0,
+                // Number of milliseconds between automatically proceeding to the
+                // next slide, disabled when set to 0, this value can be overwritten
+                // by using a data-autoslide attribute on your slides
+                autoSlide: 0,
 
-	// Stop auto-sliding after user input
-	autoSlideStoppable: true,
+                // Stop auto-sliding after user input
+                autoSlideStoppable: true,
 
-	// Use this method for navigation when auto-sliding
-	autoSlideMethod: Reveal.navigateNext,
+                // Use this method for navigation when auto-sliding
+                autoSlideMethod: Reveal.navigateNext,
 
-	// Enable slide navigation via mouse wheel
-	mouseWheel: false,
+                // Enable slide navigation via mouse wheel
+                mouseWheel: false,
 
-	// Hides the address bar on mobile devices
-	hideAddressBar: true,
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
 
-	// Opens links in an iframe preview overlay
-	previewLinks: false,
+                // Opens links in an iframe preview overlay
+                previewLinks: false,
 
-	// Transition style
-	transition: 'slide', // none/fade/slide/convex/concave/zoom
+                // Transition style
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-	// Transition speed
-	transitionSpeed: 'default', // default/fast/slow
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
 
-	// Transition style for full page slide backgrounds
-	backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+                // Transition style for full page slide backgrounds
+                backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
 
-	// Number of slides away from the current that are visible
-	viewDistance: 3,
+                // Number of slides away from the current that are visible
+                viewDistance: 3,
 
-	// Parallax background image
-	parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+                // Parallax background image
+                parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 
-	// Parallax background size
-	parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+                // Parallax background size
+                parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
 
-	// Number of pixels to move the parallax background per slide
-	// - Calculated automatically unless specified
-	// - Set to 0 to disable movement along an axis
-	parallaxBackgroundHorizontal: null,
-	parallaxBackgroundVertical: null,
+                // Number of pixels to move the parallax background per slide
+                // - Calculated automatically unless specified
+                // - Set to 0 to disable movement along an axis
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
 
-	// The display mode that will be used to show slides
-	display: 'block',
+                // The display mode that will be used to show slides
+                display: 'block',
 
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					// Zoom in and out with Alt+click
-		            { src: 'plugin/zoom-js/zoom.js', async: true },
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    // Zoom in and out with Alt+click
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
 
-		            // Speaker notes
-					{ src: 'plugin/notes/notes.js', async: true },
+                    // Speaker notes
+                    { src: 'plugin/notes/notes.js', async: true },
 
-					// MathJax
-					{ src: 'plugin/math/math.js', async: true }
-				]
-			});
-		</script>
-	</body>
+                    // MathJax
+                    { src: 'plugin/math/math.js', async: true },
+                    { src: 'plugin/line-numbers/line-numbers.js' }
+                ]
+            });
+            </script>
+</body>
+
 </html>
