@@ -6,42 +6,42 @@ This is a temporary script file.
 
 """
 
-print('欢迎来到恋爱大冒险')
+print('欢迎来到相亲大作战')
 input()
 print('请按回车键来进行游戏')
 input()
-print('经过三年的学习，我终于和同年级的暗恋的女生考上了同一所大学')
+print('今年28岁生日，父母说我的个人问题也要提上日程了，给我介绍了同事家的女儿见面。')
 input()
-print('开学第一天，我在食堂遇到她了，我应该')
+print('加了微信，偶尔聊了一下感觉不错，决定约个饭，第一次见面应该去哪呢？')
 input()
-print('1.直接上去要微信\t2.以老乡的名义上去聊天\t3.继续吃饭')
+print('1.火锅店\t2.咖啡馆\t3.夜店')
 option1=int(input('请做出选择：按数字1-3，然后回车\n'))
 if option1==1:
-    print('太仓促了，机会还不成熟')
+    print('火锅店吵死了，没法聊天，不欢而散')
     input()
     print('对不起，你失败了。GAME OVER')
 elif option1==2:
-    print('似乎认识了，而且加了微信好友')
+    print('安静的环境，比较适合沟通')
     input()
-    print('下午上完课回到寝室，心情激动，发条什么微信呢？')
+    print('吃完饭，对方看到账单，价格挺高的，提出想AA，我应该说')
     input()
-    print('1.你加了什么社团\t2.晚饭准备吃啥？\t3.周末有空吗？')
+    print('1. 这次我付下次你付 \t2. 同意AA \t3. 我吃得很少，应该对方买单')
     option2=int(input('请做出选择：按数字1-3，然后回车\n'))
     if option2==1:
-        print('我知道她在哪个社团了，我也挺有兴趣，可以一同加入')
+        print('嗯，这样就有下次了')
     elif option2==2:
-        print('太庸俗了，这是尬聊')
+        print('亲兄弟明算账，算得很精呀')
         input()
         print('对不起，你失败了。GAME OVER')
     elif option2==3:
-        print('还不熟，乱约什么') 
+        print('你注定单身...') 
         input()
         print('对不起，你失败了。GAME OVER')
     else:
         print('输入错误，请重头来过')
         pass
 elif option1==3:
-    print('太怂了，注定单身')
+    print('对方直接拒绝了...')
     input()
     print('对不起，你失败了。GAME OVER')
 else:
